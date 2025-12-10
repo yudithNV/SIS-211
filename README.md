@@ -25,9 +25,10 @@ Proyecto: Gestión de restaurante (Panel Administrativo)
 2.  **Ejecuta:**
 
 ```bat
-java -cp "bin;bin\librerias\*" restaurante.Restauranteease 21 -encoding UTF-8 -cp ".;../bin/librerias/*" -d ../bin Vista/Sistema.java db_clases/*.java proyecto_cvs/*.java interfaces/*.java restaurante/*.java
+cd Restaurante
 ```
-
+java -cp "bin;bin\librerias\*" restaurante.Restaurante
 ---
+
 
 
