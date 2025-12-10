@@ -1,7 +1,7 @@
 # Bits & Grills (Panel Administrativo)
 
-Proyecto: Bits & Grills (Panel Administrativo) — aplicación Java Swing para gestión de restaurante.
 
+Proyecto: Gestión de restaurante (Panel Administrativo) 
 ## Requisitos
 
 - Java: JDK 21 instalado.
@@ -21,20 +21,13 @@ Proyecto: Bits & Grills (Panel Administrativo) — aplicación Java Swing para g
 
 ## Ejecutar la aplicación (Windows)
 
-Usa exactamente este comando (cmd.exe):
+
+1.  **Abre la terminal (cmd.exe)** en la carpeta del proyecto **Restaurante**.
+2.  **Ejecuta:**
 
 ```bat
-cd "c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante" && java -cp "bin;bin\librerias\*" restaurante.Restaurante
+cd Restaurante
 ```
-
-Si no tienes `bin` actualizado, compila primero desde `src`:
-
-```bat
-cd "c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src"
-javac --release 21 -encoding UTF-8 -cp ".;../bin/librerias/*" -d ../bin Vista/Sistema.java db_clases/*.java proyecto_cvs/*.java interfaces/*.java restaurante/*.java
-```
-
+java -cp "bin;bin\librerias\*" restaurante.Restaurante
 ---
-
-Si quieres que agregue instrucciones para crear o restaurar `bd_restaurante.sql` dentro de este README, dímelo y lo añado.
 
