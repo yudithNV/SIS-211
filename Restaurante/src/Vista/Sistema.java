@@ -230,6 +230,7 @@ public final class Sistema extends javax.swing.JFrame {
         btnSala.setForeground(new java.awt.Color(45, 45, 45));
         btnSala.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sala.png"))); // NOI18N
         btnSala.setText("Salas");
+        btnSala.setToolTipText("Ver y gestionar salas del restaurante");
         btnSala.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnSala.setFocusable(false);
         btnSala.addActionListener(new java.awt.event.ActionListener() {
@@ -242,6 +243,7 @@ public final class Sistema extends javax.swing.JFrame {
         btnVentas.setForeground(new java.awt.Color(45, 45, 45));
         btnVentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pedidos.png"))); // NOI18N
         btnVentas.setText("Pedidos");
+        btnVentas.setToolTipText("Ver historial de pedidos y ventas");
         btnVentas.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnVentas.setFocusable(false);
         btnVentas.addActionListener(new java.awt.event.ActionListener() {
@@ -254,6 +256,7 @@ public final class Sistema extends javax.swing.JFrame {
         btnConfig.setForeground(new java.awt.Color(45, 45, 45));
         btnConfig.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/config.png"))); // NOI18N
         btnConfig.setText("Config");
+        btnConfig.setToolTipText("Configuración del restaurante (RUC, nombre, dirección)");
         btnConfig.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnConfig.setFocusable(false);
         btnConfig.addActionListener(new java.awt.event.ActionListener() {
@@ -271,6 +274,7 @@ public final class Sistema extends javax.swing.JFrame {
         btnUsuarios.setForeground(new java.awt.Color(45, 45, 45));
         btnUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/usuarios.png"))); // NOI18N
         btnUsuarios.setText("Usuarios");
+        btnUsuarios.setToolTipText("Gestionar usuarios del sistema");
         btnUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnUsuarios.setFocusable(false);
         btnUsuarios.addActionListener(new java.awt.event.ActionListener() {
@@ -283,6 +287,7 @@ public final class Sistema extends javax.swing.JFrame {
         btnPlatos.setForeground(new java.awt.Color(45, 45, 45));
         btnPlatos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/platos.png"))); // NOI18N
         btnPlatos.setText("Platos");
+        btnPlatos.setToolTipText("Gestionar menú de platos del día");
         btnPlatos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnPlatos.setFocusable(false);
         btnPlatos.addActionListener(new java.awt.event.ActionListener() {
@@ -362,7 +367,7 @@ public final class Sistema extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Panel", jPanel9);
 
-        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setBackground(new java.awt.Color(250, 250, 250));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tableSala.setModel(new javax.swing.table.DefaultTableModel(
@@ -390,9 +395,9 @@ public final class Sistema extends javax.swing.JFrame {
             tableSala.getColumnModel().getColumn(2).setMaxWidth(150);
         }
 
-        jPanel4.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 80, 490, 470));
+        jPanel4.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(345, 25, 718, 543));
 
-        jPanel10.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel10.setBackground(new java.awt.Color(250, 250, 250));
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel18.setFont(new java.awt.Font("Times New Roman", 3, 14)); // NOI18N
@@ -403,37 +408,56 @@ public final class Sistema extends javax.swing.JFrame {
         txtNombreSala.setBorder(null);
         jPanel10.add(txtNombreSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 190, 30));
 
+        btnRegistrarSala.setBackground(new java.awt.Color(46, 125, 50));
+        btnRegistrarSala.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistrarSala.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        btnRegistrarSala.setText("Guardar");
         btnRegistrarSala.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/GuardarTodo.png"))); // NOI18N
+        btnRegistrarSala.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRegistrarSala.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarSalaActionPerformed(evt);
             }
         });
-        jPanel10.add(btnRegistrarSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 100, 40));
+        jPanel10.add(btnRegistrarSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 130, 45));
 
-        btnActualizarSala.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
+        btnActualizarSala.setBackground(new java.awt.Color(25, 118, 210));
+        btnActualizarSala.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizarSala.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        btnActualizarSala.setText("Actualizar");
+        btnActualizarSala.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnActualizarSala.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarSalaActionPerformed(evt);
             }
         });
-        jPanel10.add(btnActualizarSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 100, 40));
+        jPanel10.add(btnActualizarSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 230, 130, 45));
 
+        btnNuevoSala.setBackground(new java.awt.Color(120, 120, 120));
+        btnNuevoSala.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevoSala.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        btnNuevoSala.setText("Nuevo");
         btnNuevoSala.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/nuevo.png"))); // NOI18N
+        btnNuevoSala.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNuevoSala.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoSalaActionPerformed(evt);
             }
         });
-        jPanel10.add(btnNuevoSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 300, 100, 40));
+        jPanel10.add(btnNuevoSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 290, 130, 45));
 
+        btnEliminarSala.setBackground(new java.awt.Color(211, 47, 47));
+        btnEliminarSala.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminarSala.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        btnEliminarSala.setText("Eliminar");
         btnEliminarSala.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/eliminar.png"))); // NOI18N
+        btnEliminarSala.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminarSala.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarSalaActionPerformed(evt);
             }
         });
-        jPanel10.add(btnEliminarSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 100, 40));
+        jPanel10.add(btnEliminarSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 130, 45));
         jPanel10.add(txtIdSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 24, -1));
 
         jPanel35.setBackground(new java.awt.Color(0, 0, 0));
@@ -485,7 +509,7 @@ public final class Sistema extends javax.swing.JFrame {
         jLabel19.setText("Mesas:");
         jPanel10.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
 
-        jPanel4.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 310, 370));
+        jPanel4.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 25, 289, 543));
 
         jTabbedPane1.addTab("Salas", jPanel4);
 
@@ -1156,7 +1180,7 @@ public final class Sistema extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Usuarios", jPanel12);
 
-        jPanel11.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel11.setBackground(new java.awt.Color(250, 250, 250));
         jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel23.setFont(new java.awt.Font("Tahoma", 3, 12)); // NOI18N
@@ -1180,37 +1204,56 @@ public final class Sistema extends javax.swing.JFrame {
         });
         jPanel11.add(txtPrecioPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 170, 30));
 
+        btnGuardarPlato.setBackground(new java.awt.Color(46, 125, 50));
+        btnGuardarPlato.setForeground(new java.awt.Color(255, 255, 255));
+        btnGuardarPlato.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        btnGuardarPlato.setText("Guardar");
         btnGuardarPlato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/GuardarTodo.png"))); // NOI18N
+        btnGuardarPlato.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardarPlato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarPlatoActionPerformed(evt);
             }
         });
-        jPanel11.add(btnGuardarPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 110, 50));
+        jPanel11.add(btnGuardarPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 120, 45));
 
-        btnEditarPlato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logo.png"))); // NOI18N
+        btnEditarPlato.setBackground(new java.awt.Color(25, 118, 210));
+        btnEditarPlato.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditarPlato.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        btnEditarPlato.setText("Actualizar");
+        btnEditarPlato.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEditarPlato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEditarPlatoActionPerformed(evt);
             }
         });
-        jPanel11.add(btnEditarPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 270, 100, 50));
+        jPanel11.add(btnEditarPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 120, 45));
 
+        btnEliminarPlato.setBackground(new java.awt.Color(211, 47, 47));
+        btnEliminarPlato.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminarPlato.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        btnEliminarPlato.setText("Eliminar");
         btnEliminarPlato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/eliminar.png"))); // NOI18N
+        btnEliminarPlato.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminarPlato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarPlatoActionPerformed(evt);
             }
         });
-        jPanel11.add(btnEliminarPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 110, 50));
+        jPanel11.add(btnEliminarPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 120, 45));
 
+        btnNuevoPlato.setBackground(new java.awt.Color(120, 120, 120));
+        btnNuevoPlato.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevoPlato.setFont(new java.awt.Font("Segoe UI", 1, 12));
+        btnNuevoPlato.setText("Nuevo");
         btnNuevoPlato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/nuevo.png"))); // NOI18N
+        btnNuevoPlato.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNuevoPlato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoPlatoActionPerformed(evt);
             }
         });
-        jPanel11.add(btnNuevoPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 100, 50));
+        jPanel11.add(btnNuevoPlato, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, 120, 45));
 
         jPanel31.setBackground(new java.awt.Color(0, 0, 0));
 

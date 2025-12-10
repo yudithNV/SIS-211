@@ -1,89 +1,40 @@
-# Sistema de Gestión de Restaurante
+# Bits & Grills (Panel Administrativo)
 
-## Configuración de Base de Datos
+Proyecto: Bits & Grills (Panel Administrativo) — aplicación Java Swing para gestión de restaurante.
 
-El sistema está configurado para conectarse a PostgreSQL con los siguientes parámetros:
-- **Base de datos:** `bd_restaurante`
-- **Host:** `localhost`
-- **Puerto:** `5432`
-- **Usuario:** `postgres`
-- **Contraseña:** `admin`
+## Requisitos
 
-## Estructura del Proyecto
+- Java: JDK 21 instalado.
+- PostgreSQL: servidor local (ej. `localhost:5432`).
+- JDBC driver: `postgresql-42.7.1.jar` en `librerias` o `bin/librerias`.
+- Compilador: `javac` (incluido en JDK).
+- Herramienta cliente: `psql` o `pgAdmin` para ejecutar el script SQL.
 
-```
-Restaurante/
-├── bin/                    # Clases compiladas
-│   └── librerias/         # Librerías JAR necesarias
-├── src/                   # Código fuente
-│   ├── db_clases/        # Clases de acceso a datos
-│   ├── proyecto_cvs/     # Modelos de negocio
-│   ├── Vista/            # Interfaz gráfica (Swing)
-│   ├── restaurante/      # Clase principal
-│   └── librerias/        # Librerías JAR (fuente)
-└── run.bat               # Script para ejecutar la aplicación
-```
+## Archivos importantes
 
-## Dependencias
+- `bd_restaurante.sql` : volcado/backup de la base de datos que quieres restaurar.
+- `init_db_postgres.sql` : (opcional) script con esquema y datos de ejemplo.
+- `bin/` : carpeta con clases compiladas.
+- `bin/librerias/` : debe contener `postgresql-42.7.1.jar` y otras librerías.
+- `src/` : código fuente Java.
+- `src/db_clases/Conexion.java` : configuración de conexión JDBC (ajusta usuario/clave si es necesario).
 
-- **PostgreSQL JDBC Driver** (postgresql-42.7.1.jar)
-- **iText PDF** (itextpdf-5.5.1.jar) - para generación de reportes
-- **AbsoluteLayout** (AbsoluteLayout.jar) - para componentes NetBeans
+## Ejecutar la aplicación (Windows)
 
-## Cómo Ejecutar
+Usa exactamente este comando (cmd.exe):
 
-### Opción 1: Usar el script run.bat
-```cmd
-cd Restaurante
-run.bat
+```bat
+cd "c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante" && java -cp "bin;bin\librerias\*" restaurante.Restaurante
 ```
 
-### Opción 2: Línea de comandos
-```cmd
-cd Restaurante
-java -cp "bin;bin\librerias\*" restaurante.Restaurante
+Si no tienes `bin` actualizado, compila primero desde `src`:
+
+```bat
+cd "c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src"
+javac --release 21 -encoding UTF-8 -cp ".;../bin/librerias/*" -d ../bin Vista/Sistema.java db_clases/*.java proyecto_cvs/*.java interfaces/*.java restaurante/*.java
 ```
 
-### Verificar Conexión a Base de Datos
-```cmd
-cd Restaurante
-testconn.bat
-```
+---
 
-## Compilación
+Si quieres que agregue instrucciones para crear o restaurar `bd_restaurante.sql` dentro de este README, dímelo y lo añado.
 
-Si necesitas recompilar el proyecto:
-```cmd
-cd Restaurante
-dir /b /s src\*.java > sources.txt
-javac --release 21 -cp "bin;bin\librerias\*" -d bin @sources.txt
-```
-
-## Notas Importantes
-
-1. **Base de Datos:** Asegúrate de que PostgreSQL esté corriendo y que la base de datos `bd_restaurante` exista con las tablas necesarias:
-   - `usuarios`
-   - `platos`
-   - `pedidos`
-   - `detalle_pedidos`
-   - `salas`
-   - `restaurante` (o `config`)
-   - `facturas`
-
-2. **Credenciales:** Las credenciales están configuradas en `src/db_clases/Conexion.java`. Para mayor seguridad, considera moverlas a un archivo de configuración externo.
-
-3. **Java Version:** El proyecto requiere Java 21 o superior.
-
-## Migración desde MySQL
-
-El proyecto fue migrado de MySQL a PostgreSQL. Los cambios principales incluyen:
-- URL JDBC actualizada de `jdbc:mysql://` a `jdbc:postgresql://`
-- Driver actualizado de `mysql-connector` a `postgresql`
-- Unificación de conexiones para usar la clase `Conexion` centralizada
-
-## Troubleshooting
-
-- **"No suitable driver":** Verifica que `postgresql-42.7.1.jar` esté en `bin\librerias\`
-- **"Connection refused":** Verifica que PostgreSQL esté corriendo en el puerto 5432
-- **"Authentication failed":** Revisa las credenciales en `Conexion.java`
-- **"Database does not exist":** Crea la base de datos `bd_restaurante` en PostgreSQL

@@ -1,3 +1,9 @@
+c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\ArreglarTablaPedidos.java
+c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\ArreglarTablas.java
+c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\InitDatabase.java
+c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\VerDatos.java
+c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\VerEstructuraPedidos.java
+c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\VerPedidos.java
 c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\db_clases\Conexion.java
 c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\db_clases\facturaDB.java
 c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\db_clases\loginDB.java
@@ -16,5 +22,6 @@ c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\proyec
 c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\proyecto_cvs\salas.java
 c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\proyecto_cvs\Tables.java
 c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\restaurante\Restaurante.java
+c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\test\TestConn.java
 c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\Vista\FrmLogin.java
 c:\Users\noa_y\Desktop\proyecto_Est\ProyectoInf113-prueba\Restaurante\src\Vista\Sistema.java

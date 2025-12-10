@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-
 import proyecto_cvs.platos;
 
 public class platosDB {
@@ -17,7 +16,7 @@ public class platosDB {
     ResultSet rs;
 
     public boolean Registrar(platos pla) {
-        String sql = "INSERT INTO platos (nombre, precio, fecha) VALUES (?,?,?)";
+        String sql = "INSERT INTO platos (nombre, precio, fecha) VALUES (?,?,CAST(? AS DATE))";
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
@@ -40,8 +39,8 @@ public class platosDB {
 
     public List Listar(String valor, String fecha) {
         List<platos> Lista = new ArrayList();
-        String sql = "SELECT * FROM platos WHERE fecha = ?";
-        String consulta = "SELECT * FROM platos WHERE nombre LIKE '%"+valor+"%' AND fecha = ?";
+        String sql = "SELECT * FROM platos WHERE fecha = CAST(? AS DATE)";
+        String consulta = "SELECT * FROM platos WHERE nombre LIKE '%"+valor+"%' AND fecha = CAST(? AS DATE)";
         try {
             con = cn.getConnection();
             if(valor.equalsIgnoreCase("")){
