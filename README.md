@@ -26,9 +26,9 @@ Proyecto: Gestión de restaurante (Panel Administrativo)
 
 ```bat
 cd Restaurante
-```
 java -cp "bin;bin\librerias\*" restaurante.Restaurante
----
+```
+
 
 
 
